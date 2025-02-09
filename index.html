@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Freequency Beatz</title>  
+</head>
+<body>
+<!-- Page 1 -->
+<section id="page1" class="page">
+  <video autoplay muted loop id="video-bg">
+    <source src="HBG.mp4" type="video/mp4">                    
+  </video>
+  <div class="center-text">
+    <a href="#page2" class="clickable-text">||||</a>
+   </div>
+</section>
+<!-- Page 2 -->
+<section id="page2" class="page">
+  <h1 class="logo">||||</h1>
+    
+<div> 
+  <video autoplay muted loop id="m-video">
+    <source src="MBG.mp4" type="video/mp4">
+  </video>
+<p>Welcome to <strong>Freequency Beatz</strong></p>
+</div>
+<div class="options">
+  <a href="#page3" class="option">Select Beats</a>
+  <a href="#page5" class="option">Request Beats</a>
+  <a href="#page6" class="option">Submit Project</a>
+</div>         
+</section>    
+
+
+
+
+<!-- Page 3 -->
+<section id="page3" class="page">   
+  <h1 class="logo">||||</h1>
+  <h1 class="logotxt">FREEQUENCY BEATS</h1>
+  <a href="#page2" class="back"> < </a>                           
+<div class="beat-list"> 
+  <h1 class="cyn">Choose your noise</h1>                           
+<!-- Beat 1 -->
+<div class="beat">
+  <audio controls>
+    <source src="1-ZZL.mp3" type="audio/mp3">
+  </audio>
+<p>0.0008 BTC</p>
+  <a href="#page4">
+    <img src="Bitcoin.png" alt="Pay with Bitcoin" width="30" height="30">
+  </a>
+</div> 
+<!-- Beat 2 -->
+<div class="beat">
+  <audio controls>
+    <source src="2-F130.mp3" type="audio/mp3">
+  </audio>
+<p>0.0008 BTC</p>
+  <a href="#page4">
+    <img src="Bitcoin.png" alt="Pay with Bitcoin" width="30" height="30">
+  </a>
+</div> 
+<!-- Beat 3 -->
+<div class="beat">
+  <audio controls>
+    <source src="3-Am95.mp3" type="audio/mp3">
+  </audio>
+<p>0.0008 BTC</p>
+  <a href="#page4">
+    <img src="Bitcoin.png" alt="Pay with Bitcoin" width="30" height="30">
+  </a>
+</div> 
+<!-- Beat 4 -->
+<div class="beat">
+  <audio controls>
+    <source src="4-Fm136.mp3" type="audio/mp3">
+  </audio>
+<p>0.0008 BTC</p>
+  <a href="#page4">
+    <img src="Bitcoin.png" alt="Pay with Bitcoin" width="30" height="30">
+  </a>
+</div> 
+<!-- Beat 5 -->
+<div class="beat">
+  <audio controls>
+    <source src="5-G#140.mp3" type="audio/mp3">
+  </audio>
+<p>0.0008 BTC</p>
+  <a href="#page4">
+    <img src="Bitcoin.png" alt="Pay with Bitcoin" width="30" height="30">
+  </a>
+  </div>
+  <h2 class="delisted">Delisted Upon Purchase</h2>    
+</div> 
+  </section>
+<!-- Page 4 -->
+<section id="page4" class="page">
+    <h1 class="logo">||||</h1>
+  <h1 class="logotxt">FREEQUENCY BEATS</h1>
+  <div class="center-text">
+    <a href="#page3" class="back"> < </a>
+   </div>
+    <div class="steps">
+      <p>Step 1: Scan or copy Bitcoin QR code</p>
+      <img src="btcbusiness.jpg" alt="Bitcoin QR Code">
+       <p>Adress:  3L763k3RPB7wg31AGCpDQP8V1shjSgH7p7 </p>
+      <p>Step 2: <a href="mailto:kxyfreequency@gmail.com">Submit proof here</a></p>
+      <p>Step 3: Receive beat and license</p>
+    </div>
+</div>         
+</section>  
+  <!-- Page 5: Request -->
+  <section id="page5" class="page">
+    <h1 class="logo">||||</h1>
+    <h1 class="logotxt">FREEQUENCY BEATS</h1>
+  <a href="#page2" class="back"> < </a>
+    <h1>Coming Soon!</h1>
+    <div>
+  <video autoplay muted loop id="m-video">
+    <source src="MBG.mp4" type="video/mp4">
+  </video>
+</div>
+  </section>    
+  <!-- Page 6: Submit-->
+  <section id="page6" class="page">
+      <h1 class="logo">||||</h1>
+      <h1 class="logotxt">FREEQUENCY BEATS</h1>
+      <a href="#page2" class="back"> < </a>
+    <p class="if">If you are on this page, you must have had prior communication with our team about your project. Write: Submit project to <a href="mailto:kxyfreequency@gmail.com">Kxy</a> for more enquires.
+    
+<form id="upload-form" action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+  <label for="key">Enter 4-digit key:</label>
+  <input type="text" id="key" name="key" maxlength="4" required>
+  <div id="upload-section" style="display:none;">
+    <label for="file">Upload your project file (ZIP or RAR):</label>
+    <input type="file" id="file" name="file" accept=".zip,.rar" required>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+        
+
+<script>
+  // Function to show/hide the upload section based on the key input
+document.getElementById('key').addEventListener('input', function (e) {
+  const key = e.target.value;
+  const uploadSection = document.getElementById('upload-section');
+
+  // Show upload section if the key is "CS50"
+  if (key === 'CS50') {
+    uploadSection.style.display = 'block';
+  } else {
+    uploadSection.style.display = 'none';
+  }
+});
+
+// Function to handle form submission asynchronously
+document.getElementById('upload-form').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent the default form submission
+
+  const formData = new FormData(this); // Create a FormData object from the form
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      alert('File uploaded successfully!'); // Display a success message
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('File upload failed. Please try again.'); // Display an error message
+    });
+});
+</script>
+
+</body>
+</html>
+

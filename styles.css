@@ -1,0 +1,319 @@
+/* default settings for all pages*/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Raleway', serif;
+  text-decoration: none;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#page1 {
+  background: black;
+  
+  }
+  
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.49;  
+  
+}  
+.center-text {
+  background: black;
+  padding: px;
+  border-radius: 50px;
+  opacity: 1;
+  z-index: 2;
+
+}  
+.clickable-text {
+  color: white;
+  display: flex;
+  font-size: 5em;
+  font-weight: bold;  
+  animation: colorAnimation 1s infinite, zoomInOut infinite 20s
+  } 
+@keyframes colorAnimation {
+  0% { color: red; } 
+  14% { color: orange; } 
+  28% { color: yellow; } 
+  42% { color: green; } 
+  56% { color: blue; }
+  76% { color: indigo; }
+  100% { color: purple; }
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7); /* Zoom In */
+  }
+  100% {
+    transform: scale(1); /* Zoom Out */
+  }
+} 
+  
+} 
+  
+#page2 {
+  background: none;
+  
+}
+
+
+
+.options {
+  margin-top: 40px;
+  z-index: 2;
+}
+
+.option {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  background: red;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+.option:hover {
+  background: #ff4500;
+}
+
+.background-video {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh; 
+  object-fit: cover; 
+  z-index: -1;
+}
+
+/* Hide background video on Page 1 */
+#page1 .background-video {
+  display: none;
+}
+
+#page3 {
+  background: black;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  position: relative;
+  z-index: 10;
+  max-height: 100vh;
+  margin-bottom: 150px;
+}
+
+
+.cyn {   
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  position: absolute; 
+  top: -6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.beat-list {
+  display: flex;
+  margin-top: 500px;  
+  flex-wrap: wrap;    
+  gap: 25px;
+  height: 100vh;
+  flex-direction: row;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+
+.beat {
+  background: none;
+  padding: 15px;   
+  border-radius: 0px;
+  z-index: 1;
+}
+
+a img {
+      transition: transform 0.7s ease; /* Smooth hover effect */
+    }
+
+    a img:hover {
+      transform: scale(1.4); /* Slightly enlarge the image on hover */
+.delisted {  
+  left: 50%;
+  color: white;
+  font-weight: 400;
+  bottom: -34%;  
+  padding: 30px;
+  font-size: 0.8em;
+  font-style: italic;
+  position: absolute;
+  align-items: center;
+  justify-content: center;        
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  animation: colorAnimation 1s infinite;
+ }    }
+    
+
+#page4 {
+  background: black;
+}
+
+.steps {
+  text-align: center;
+}
+
+#page5 {
+  background: black;
+}
+
+#page6 {
+  background: black;
+}
+
+form {
+  margin-top: 20px;
+  z-index: 10;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff4500;
+}
+
+#m-video {    
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.29;   
+}
+
+
+.delisted {  
+  left: 50%;
+  color: white;
+  font-weight: 400;
+  bottom: -34%;  
+  padding: 30px;
+  font-size: 0.8em;
+  font-style: italic;
+  position: absolute;
+  align-items: center;
+  justify-content: center;        
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  animation: colorAnimation 1s infinite;
+ }
+ 
+ .logo {
+  color: white;
+  display: flex;
+  position: absolute;
+  margin-top: -690px;  
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: 'Raleway' display;
+  font-weight: bold;
+  animation: colorAnimation 1s infinite;
+}
+  
+@keyframes colorAnimation {
+  0% { color: red; } 
+  10% { color: red; }   
+  20% { color: red; } 
+  30% { color: green; }
+  40% { color: blue; }
+  50% { color: purple; }
+  70% { color: gold; }
+  80% { color: orange; }
+  90% { color: red; }
+  100% { color: blue; }
+}
+
+.logotxt {
+  color: white;
+  display: flex;
+  position: absolute;
+  margin-top: -610px;  
+  font-size: 1em;
+  text-decoration: none;
+  font-family: 'Almendra', serif;
+  font-weight: 300;
+  animation: colorAnimation 1s infinite;
+}
+
+
+.back {
+  top: 0; /* Move to the top edge */
+  color: white;
+  display: flex;
+  position: absolute; /* Keep it absolute for precise positioning */
+  margin: 0; /* Remove any margin */
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: 'Almendra', serif;
+  font-weight: 300;
+  left: 30px; /* Adjust this value to move it more to the left */  
+  margin: 0;
+  align-items: center; /* Vertically center with .logo */
+  height: 14%; /* Ensure it takes full height for alignment */  
+  z-index: 10; /* Ensure it's above other elements */
+  animation: colorAnimation 1s infinite
+}
+.if {
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
