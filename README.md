@@ -4,4 +4,4 @@ All files in this repository are protected by copyright law. You may not:
 - Modify, adapt, or create derivative works based on these files.
 - Use these files for commercial purposes.
 Violation of these terms may result in actual legal action, including but not limited to claims for financial damages and injunctive relief.
-# Terms of Use
+
