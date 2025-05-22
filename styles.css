@@ -166,6 +166,10 @@ body, html {
   z-index: 1;
 }
 
+.beat img {
+  z-index: 9999;
+}
+
 a img {
       transition: transform 0.7s ease; /* Smooth hover effect */
     }
