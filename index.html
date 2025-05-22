@@ -138,6 +138,36 @@
   </div>
 </form>        
 <script>
+  // Wait for all images to fully load before showing the page
+  window.addEventListener('load', () => {
+    const imgs = document.images;
+    let count = 0;
+    const total = imgs.length;
+
+    if (total === 0) {
+      document.documentElement.style.visibility = 'visible';
+    }
+
+    for (let img of imgs) {
+      if (img.complete) {
+        count++;
+      } else {
+        img.addEventListener('load', checkImages);
+        img.addEventListener('error', checkImages);
+      }
+    }
+
+    function checkImages() {
+      count++;
+      if (count === total) {
+        document.documentElement.style.visibility = 'visible';
+      }
+    }
+
+    if (count === total) {
+      document.documentElement.style.visibility = 'visible';
+    }
+  });
   // Function to show/hide the upload section based on the key input
 document.getElementById('key').addEventListener('input', function (e) {
   const key = e.target.value;
